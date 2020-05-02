@@ -1,4 +1,7 @@
-/*** 代码转载自：https://www.jianshu.com/p/5f4c9694b807 ***/
+/*** 代码转载来源说明
+ *   博客：https://www.jianshu.com/p/5f4c9694b807
+ *   代码仓库：https://github.com/nicktming/code/tree/master/data_structure
+ * ***/
 package programlearn.datastruct.tree;
 
 import java.util.LinkedList;
