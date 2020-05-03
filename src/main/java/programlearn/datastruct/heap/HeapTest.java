@@ -1,3 +1,4 @@
+/** 讲堆的博客：https://www.jianshu.com/p/6b526aa481b1**/
 package programlearn.datastruct.heap;
 
 import java.util.Comparator;
@@ -6,6 +7,7 @@ import java.util.PriorityQueue;
 public class HeapTest {
     private PriorityQueue<Integer> priorityQueue;
 
+    //默认比较器的堆排序和堆操作
     public void normalHeapTest() {
         PriorityQueue<Integer> heap = new PriorityQueue<Integer>();
         heap.offer(7);
@@ -22,6 +24,7 @@ public class HeapTest {
         System.out.println(heap);
     }
 
+    //自定义比较器的堆排序和堆操作
     public void heapTestWithComparator() {
         PriorityQueue<Employee> heap = new PriorityQueue<Employee>(new Comparator<Employee>() {
             public int compare(Employee o1, Employee o2) {
