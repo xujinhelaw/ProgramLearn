@@ -13,6 +13,13 @@ public class CommonUtils {
             }
             System.out.println("]");
         }
+    }
 
+    public static void setTwoDimensionArrayInitValue(int[][] arrays,int number){
+        for(int i=0;i<arrays.length;i++){
+            for(int j=0;j<arrays[i].length;j++){
+                arrays[i][j] = number;
+            }
+        }
     }
 }
