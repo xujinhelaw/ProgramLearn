@@ -5,7 +5,7 @@
  * 解题思路：https://leetcode-cn.com/problems/tiling-a-rectangle-with-the-fewest-squares/solution/5241-pu-ci-zhuan-dong-tai-gui-hua-by-xu-yuan-shu/
  *
  */
-package programlearn.leetcode.fewestsquares;
+package programlearn.leetcode.dp.fewestsquares;
 
 public class TilingRectangleClass {
 

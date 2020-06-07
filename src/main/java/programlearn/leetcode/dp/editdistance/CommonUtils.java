@@ -1,4 +1,4 @@
-package programlearn.leetcode.editdistance;
+package programlearn.leetcode.dp.editdistance;
 
 public class CommonUtils {
     public static void printTwoDimensionArray(int[][] array) {
