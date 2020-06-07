@@ -3,11 +3,9 @@
  *
  * 若队列为空，pop_front 和 max_value 需要返回 -1
  *
- * 来源：力扣（LeetCode）
- * 链接：https://leetcode-cn.com/problems/dui-lie-de-zui-da-zhi-lcof
- * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+ * https://leetcode-cn.com/problems/dui-lie-de-zui-da-zhi-lcof
  **/
-package programlearn.leetcode;
+package programlearn.leetcode.queue;
 
 import java.util.*;
 

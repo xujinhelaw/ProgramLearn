@@ -1,12 +1,15 @@
 /**
- * 最小编辑距离 https://leetcode-cn.com/problems/edit-distance/description/?utm_source=LCUS&utm_medium=ip_redirect_q_uns&utm_campaign=transfer2china
+ * 最小编辑距离 给你两个单词 word1 和 word2，请你计算出将 word1 转换成 word2 所使用的最少操作数 。
+ * https://leetcode-cn.com/problems/edit-distance/description/?utm_source=LCUS&utm_medium=ip_redirect_q_uns&utm_campaign=transfer2china
  * 动态规划解题
  * 递推公式
  * dp[i][j]   =   i+j  while (i=0 & j!=0) || (i!=0 & j=0)
  *                dp[i-1][j-1]  while word1[i]=word2[j] && i*j!=0
  *                min(dp[i-1][j],dp[i][j-1],dp[i-1][j-1])+1 while word1[i]!=word2[j] && i*j!=0
  */
-package programlearn.leetcode.dp.editdistance;
+package programlearn.leetcode.dynamicprogram.editdistance;
+
+import programlearn.leetcode.common.CommonUtils;
 
 public class MinDistanceDpClass {
 

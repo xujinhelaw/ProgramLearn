@@ -1,7 +1,8 @@
 /**设计一个算法，找出数组中最小的k个数。以任意顺序返回这k个数均可。
  * https://leetcode-cn.com/problems/smallest-k-lcci/
- * **/
-package programlearn.leetcode;
+ *
+ **/
+package programlearn.leetcode.heap;
 
 import java.util.Arrays;
 import java.util.List;

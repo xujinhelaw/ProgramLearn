@@ -1,7 +1,9 @@
-/***摆动序列 https://leetcode-cn.com/problems/wiggle-subsequence/
+/***
+ * 给定一个整数序列，返回作为摆动序列的最长子序列的长度。 通过从原始序列中删除一些（也可以不删除）元素来获得子序列，剩下的元素保持其原始顺序。
+ * 摆动序列 https://leetcode-cn.com/problems/wiggle-subsequence/
  * 讲得最好的博客：https://blog.csdn.net/kexinxin1/article/details/93015779
  * ***/
-package programlearn.leetcode;
+package programlearn.leetcode.greedyalgorithm;
 
 public class WiggleSequence {
 

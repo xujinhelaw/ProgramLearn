@@ -1,7 +1,7 @@
 /**  求一个序列中不相邻的两个元素的和最大值
  *   讲解博客：https://www.bilibili.com/video/BV12W411v7rd/?spm_id_from=333.788.videocard.0
  **/
-package programlearn.leetcode;
+package programlearn.leetcode.dynamicprogram;
 
 public class NotAdjacentElementMaxValue {
     //递归实现

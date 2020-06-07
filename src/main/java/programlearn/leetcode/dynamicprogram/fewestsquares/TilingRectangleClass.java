@@ -1,15 +1,16 @@
 /**
- * 铺瓷砖问题
+ * 铺瓷砖问题 房子的客厅大小为 n x m 使用正方形铺砖，最少需要用到多少块方形瓷砖
  * https://leetcode-cn.com/problems/tiling-a-rectangle-with-the-fewest-squares/submissions/
  *
  * 解题思路：https://leetcode-cn.com/problems/tiling-a-rectangle-with-the-fewest-squares/solution/5241-pu-ci-zhuan-dong-tai-gui-hua-by-xu-yuan-shu/
  *
  */
-package programlearn.leetcode.dp.fewestsquares;
+package programlearn.leetcode.dynamicprogram.fewestsquares;
 
 public class TilingRectangleClass {
 
     private void setTwoDimensionArrayInitValue(int[][] arrays, int number) {
+        //补充一个点，非基本类型，传入的参数为地址，所以，直接对arrays进行操作就可以了
         for (int i = 0; i < arrays.length; i++) {
             for (int j = 0; j < arrays[i].length; j++) {
                 arrays[i][j] = number;

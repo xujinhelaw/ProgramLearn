@@ -1,4 +1,6 @@
-/*** 代码转载来源说明
+/***
+ *   二叉平衡树
+ *   代码转载来源说明
  *   博客：https://www.jianshu.com/p/22c00b3731f5
  *   代码仓库：https://github.com/nicktming/code/tree/master/data_structure
  * ***/
