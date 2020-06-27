@@ -9,17 +9,7 @@ import java.util.Map;
 
 public class MaxCountGroupClass {
 
-    public class Result {
-        Integer groupcount;
-        Integer employeeCount;
-        boolean divideGroupSuccess;
-        public Result(Integer groupcount,Integer employeeCount,boolean divideGroupSuccess){
-            this.groupcount = groupcount;
-            this.employeeCount = employeeCount;
-            this.divideGroupSuccess = divideGroupSuccess;
-        }
-    }
-
+    private Integer count = 0;
     public Map<Integer, List<Integer>> arrayToGraphy(int[][] relation) {
         Map<Integer, List<Integer>> graphy = new HashMap<>();
         for (int i = 0; i < relation.length; i++) {
@@ -30,35 +20,31 @@ public class MaxCountGroupClass {
         return graphy;
     }
 
-    public Result dfs(Integer root, Map<Integer, List<Integer>> graphy, Result result) {
-        if(graphy.get(root)==null){
-            return result;
+    public Integer dfs(Integer root, Map<Integer, List<Integer>> graphy) {
+        List<Integer> children = graphy.getOrDefault(root, new ArrayList<>());
+        if (children.isEmpty()) {
+            return 1;
         }
-        List<Integer> children = graphy.get(root);
-        for(Integer child : children){
-            result = dfs(child,graphy,result);
-            if(result.divideGroupSuccess){
-                result.divideGroupSuccess = false;
-            } else {
-                result.employeeCount++;
-            }
+        int value = 0;
+        for (Integer child : children) {
+            value = value + dfs(child, graphy);
         }
-        result.employeeCount++;
-        if((result.employeeCount)%2 == 0){
-            result.groupcount++;
-            result.employeeCount=0;
-            result.divideGroupSuccess = true;
-        } else {
-            result.employeeCount--;
+        value = value + 1;
+        if (value % 2 == 0) {
+            count++;
         }
-        return result;
+        return value;
     }
 
     public Integer maxCountGroup(int[][] relation) {
         Map<Integer, List<Integer>> graphy = arrayToGraphy(relation);
-        Integer root = graphy.get(-1).get(0);
-        Result result = dfs(root,graphy,new Result(0,0,false));
-        return result.groupcount;
+        List<Integer> children = graphy.getOrDefault(-1, new ArrayList<>());
+        if (children.isEmpty()) {
+            return 0;
+        }
+        count=0;
+        dfs(children.get(0), graphy);
+        return count;
     }
 
     public static void main(String[] args) {
@@ -66,5 +52,8 @@ public class MaxCountGroupClass {
         int[][] relation1 = {{2, 1}, {3, 1}, {4, 1}, {5, 2}, {6, 2}, {7, 3}, {8, 3}, {9, 4}, {10, 5}, {11, 5}, {12, 5}, {1, -1}};
         CommonUtils.printTwoDimensionArray(relation1);
         System.out.println(maxCountGroupClass.maxCountGroup(relation1));
+        int[][] relation2 = {{2, 1}, {3, 1}, {4, 2}, {5, 2}, {6, 2}, {7, 3}, {8, 3}, {1, -1}};
+        CommonUtils.printTwoDimensionArray(relation2);
+        System.out.println(maxCountGroupClass.maxCountGroup(relation2));
     }
 }
