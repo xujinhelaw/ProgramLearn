@@ -1,3 +1,11 @@
+/**
+ * 有N位员工,员工编号从0~N-1，其行政关系如一颗多叉树，二维数组relations记录了员工的关系[员工编号，直接上级员工编号]，
+ * 直接上级员工编号为-1，为最高主管。N为偶数，按如下规则分组
+ * 1、每组员工个数为偶数
+ * 2、组内必有一个成员是同组其他所有成员的直接或间接上级，任意一个成员，都与同组的某个成员存在直接上下级关系
+ * 3、每个人只能分到一个组
+ * 请返回按此规则最多能分出多少组
+ */
 package programlearn.leetcode.dfs;
 
 import programlearn.leetcode.common.CommonUtils;
@@ -43,7 +51,8 @@ public class MaxCountGroupClass {
             return 0;
         }
         count=0;
-        dfs(children.get(0), graphy);
+        dfs(children.get(0), graphy
+        );
         return count;
     }
 

@@ -1,3 +1,6 @@
+/**
+ * 数组全排列的实现
+ */
 package programlearn.leetcode;
 
 import java.util.Arrays;
