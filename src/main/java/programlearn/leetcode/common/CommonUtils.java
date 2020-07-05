@@ -28,7 +28,7 @@ public class CommonUtils {
         }
     }
 
-    public static void printArrayList(List<String> arrayList){
+    public static <E> void  printArrayList(List<E> arrayList){
         System.out.print("[");
         for(int i=0;i<arrayList.size();i++){
             if(i==arrayList.size()-1){
@@ -39,4 +39,5 @@ public class CommonUtils {
         }
         System.out.print("]");
     }
+
 }

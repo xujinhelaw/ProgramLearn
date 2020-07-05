@@ -10,6 +10,7 @@
 package programlearn.leetcode.dfs;
 
 import programlearn.leetcode.bfs.LevelOrderClass;
+import programlearn.leetcode.common.CommonUtils;
 import programlearn.leetcode.common.TreeNode;
 
 import java.util.ArrayList;
@@ -59,7 +60,10 @@ public class PathSumClass {
     public static void main(String[] args) {
         LevelOrderClass levelOrderClass = new LevelOrderClass();
         PathSumClass pathSumClass = new PathSumClass();
-        int[] nums = {5, 4, 8, 11, null, 13, 4, 7, 2, 5, 1};
-        TreeNode root = levelOrderClass.levelOrderConstruct(nums);
+        String numString = "[5,4,8,11,null,13,4,7,2,null,null,5,1]";
+        int sum = 22;
+        TreeNode root = levelOrderClass.levelOrderConstruct(numString);
+        List<List<Integer>> resultsList = pathSumClass.pathSum(root,sum);
+        resultsList.forEach(CommonUtils::printArrayList);
     }
 }

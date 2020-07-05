@@ -44,6 +44,49 @@ public class LevelOrderClass {
         return root;
     }
 
+    public TreeNode levelOrderConstruct(String[] nums) {
+        int index = 0;
+        Queue<TreeNode> queue = new LinkedList<>();
+        Queue<TreeNode> queueTmp = new LinkedList<>();
+        TreeNode root = null;
+        if (nums.length > 0) {
+            root = new TreeNode(Integer.parseInt(nums[0]));
+            queue.offer(root);
+        }
+        while (!queue.isEmpty()) {
+            while (!queue.isEmpty()) {
+                TreeNode node = queue.poll();
+                index = index + 1;
+                if (index < nums.length && !"null".equals(nums[index])) {
+                    TreeNode nodeLeft = new TreeNode(Integer.parseInt(nums[index]));
+                    node.left = nodeLeft;
+                    queueTmp.offer(nodeLeft);
+                }
+                index = index + 1;
+                if (index < nums.length && !"null".equals(nums[index])) {
+                    TreeNode nodeRight = new TreeNode(Integer.parseInt(nums[index]));
+                    node.right = nodeRight;
+                    queueTmp.offer(nodeRight);
+                }
+            }
+            queue = queueTmp;
+        }
+        return root;
+    }
+
+    public TreeNode levelOrderConstruct(String numString) {
+        int startIndex = numString.indexOf("[");
+        int endIndex = numString.indexOf("]");
+        if (startIndex != -1) {
+            numString = numString.substring(startIndex + 1);
+        }
+        if (endIndex != -1) {
+            numString = numString.substring(0, endIndex - 1);
+        }
+        String[] nums = numString.split(",");
+        return levelOrderConstruct(nums);
+    }
+
     public int[] levelOrder(TreeNode root) {
         Queue<TreeNode> queue = new LinkedList<>();
         ArrayList<Integer> arrayList = new ArrayList<>();
