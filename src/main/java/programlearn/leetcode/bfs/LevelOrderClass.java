@@ -5,24 +5,14 @@
  */
 package programlearn.leetcode.bfs;
 
+import programlearn.leetcode.common.TreeNode;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
 public class LevelOrderClass {
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int val) {
-            this.val = val;
-        }
-
-        TreeNode() {
-        }
-    }
 
     public TreeNode levelOrderConstruct(int[] nums) {
         int index = 0;
