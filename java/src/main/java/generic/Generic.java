@@ -1,7 +1,7 @@
 /** 讲解<？ extends E>和<？ super E>的区别：https://www.cnblogs.com/xiarongjin/p/8309755.html　**/
-package programlearn.datastruct.generic;
+package generic;
 
-import programlearn.datastruct.generic.pojo.*;
+import generic.pojo.*;
 
 import java.util.ArrayList;
 import java.util.List;

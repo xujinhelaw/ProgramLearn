@@ -1,4 +1,4 @@
-package programlearn.datastruct.generic.pojo;
+package generic.pojo;
 
 public class Fruit {
     private String name;
